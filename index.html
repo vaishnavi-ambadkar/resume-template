@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Resume Builder</h1>
+    </header>
+    <main>
+      <form id="resumeForm">
+        <!-- Personal Information -->
+        <section>
+          <h2>Personal Information</h2>
+          <div class="form-row">
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="text" id="jobTitle" placeholder="Job Title">
+          </div>
+          <div class="form-row">
+            <input type="text" id="address" placeholder="Address">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="phoneNumber" placeholder="Phone Number">
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section>
+          <h2>Summary</h2>
+          <textarea id="summary" placeholder="Professional Summary"></textarea>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+          <h2>Professional Experience</h2>
+          <div id="experienceInputs"></div>
+          <button type="button" onclick="addExperience()">Add Experience</button>
+        </section>
+
+        <!-- Projects -->
+        <section>
+          <h2>Projects</h2>
+          <div id="projectInputs"></div>
+          <button type="button" onclick="addProject()">Add Project</button>
+        </section>
+
+        <!-- Skills -->
+        <section>
+          <h2>Skills</h2>
+          <textarea id="skills" placeholder="List your skills"></textarea>
+        </section>
+
+        <!-- Education -->
+        <section>
+          <h2>Education</h2>
+          <div id="educationInputs"></div>
+          <button type="button" onclick="addEducation()">Add Education</button>
+        </section>
+
+        <!-- Additional Information -->
+        <section>
+          <h2>Additional Information</h2>
+          <textarea id="additionalInfo" placeholder="Languages, certifications, etc."></textarea>
+        </section>
+
+        <button type="button" onclick="generateResume()">Generate Resume</button>
+      </form>
+
+      <!-- Resume Preview -->
+      <section id="resumePreview" class="resume-preview">
+        <h2>Resume Preview</h2>
+        <div id="previewContent"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
